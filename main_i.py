@@ -44,3 +44,30 @@ print(z)
 x = 4
 y = 10
 print(x + y)
+#Per creare una variabile al di fuori di una funzione e usala all'interno della funzione
+x = "fantastica"
+
+def myfunc():
+  print("Laura è " + x)
+
+myfunc()
+#Per creare una variabile all'interno di una funzione, con lo stesso nome della variabile globale
+x = "fantastica"
+
+def myfunc():
+  x = "paziente"
+  print("Laura è sempre " + x)
+
+myfunc()
+
+print("Laura è " + x)
+#Per modificare il valore di una variabile globale all'interno di una funzione, fare riferimento alla variabile utilizzando la globalparola chiave
+x = "paziente"
+
+def myfunc():
+  global x
+  x = "fantastica"
+
+myfunc()
+
+print("Laura è " + x)
