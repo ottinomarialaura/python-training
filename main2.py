@@ -144,4 +144,10 @@ lista2 = [1, 2, 3]
 
 lista_finale = list1 + list2
 print(lista_finale) 
+#Oppure puoi usare il extend() metodo, il cui scopo è aggiungere elementi da un elenco a un altro elenco
+unalista = ["a", "b" , "c"]
+lista2 = [1, 2, 3]
+
+unalista.extend(list2)
+print(unalista) #così gli elementi della seconda lista sono stati integrati con quelli della prima
 
