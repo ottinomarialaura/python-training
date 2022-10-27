@@ -49,7 +49,7 @@ unalista.popo(2)
 
 print(unalista)
 
-#La del parola chiave può eliminare completamente l'elenco, ma anche l'indice specificato
+#La "del" parola chiave può eliminare completamente l'elenco, ma anche l'indice specificato
 unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
 del unalista[1] #eliminerà solo avocado
 print(unalista) #oppure per eliminare tutta la lista:
@@ -61,7 +61,7 @@ unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
 thislist.clear()
 print(unalista)
 
-#Stampa tutti gli elementi, utilizzando un whileciclo per scorrere tutti i numeri di indice
+#Stampa tutti gli elementi, utilizzando un while ciclo per scorrere tutti i numeri di indice
 unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
 r = 0
 while i < len(unalista):
@@ -84,4 +84,64 @@ unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
 nuova_lista = [x for x in unalista if x != "kiwi" and "melone"]
 
 print(nuova_lista) #così verranno stampati tutti gli elementi della prima lista senza kiwi e melone
+
+#Puoi usare la range()funzione per creare un iterabile:
+unalista = [x for x in range(10)]
+
+print(unalista) #cos' stamperà tutti i numeri dallo 0 al 9
+#possiamo aggiungerci anche una condizione con if
+unalista = [x for x in range(10) if x > 3]
+
+print(unalista) #così verranno stampati i numeri dal 4 al 9
+
+#per scrivere in maiuscolo tutti gli elementi della lista bisogna:
+unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
+
+nuova_lista = [x.upper() for x in unalista]
+
+print(nuova_lista)
+
+#per modificare gli elementi della lista con una sola parola:
+unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
+
+nuova_lista = ['scuola' for x in unalista]
+
+print(nuova_lista) #ora ci troveremo un susseguirsi di "scuola" al posto dei frutti
+#possiamo anche usare questa espressione con l'aggiunta di "else" per sostituire una parola con un'altra
+unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
+
+nuova_lista = [x if x != "papaia" else "scuola" for x in unalista]
+
+print(nuova_lista) #ora vedremo la parola scuola al posto di papaia
+
+#Gli oggetti List hanno un sort()metodo che ordina l'elenco in modo alfanumerico, crescente
+unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
+
+unalista.sort()
+
+print(unalista)
+#Per ordinare in modo decrescente, utilizzare la parola chiave argomento reverse = True tra ()
+unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
+
+unalista.sort(reverse = True)
+
+print(unalista)
+#se vogliamo invertire l'ordine degli elementi:
+unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
+
+unalista.reverse()
+
+print(unalista) 
+
+#per fare una copia di una lista con il copy() metodo:
+unalista = ["mela", "avocado", "banana", "kiwi", "melone", "mango", "papaia"]
+nuova_lista = unalista.copy()
+print(nuova_lista)
+
+#no dei modi per unire o concatenare due o più elenchi più semplicemente è:
+unalista = ["a", "b", "c"]
+lista2 = [1, 2, 3]
+
+lista_finale = list1 + list2
+print(lista_finale) 
 
